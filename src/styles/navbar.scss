@@ -1,192 +1,38 @@
 header {
   background-color: #000;
-  position: fixed;
-  width: 100vw;
-  opacity: 0.95;
-  z-index: 1;
+  // position: fixed;
+  // width: 100vw;
+  // opacity: 0.95;
+  // z-index: 1;
 }
 
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--nav-height);
-  margin: 0 10px;
-
-  .navbar-right {
-    display: flex;
-    align-items: center;
-
-    .user-icon,
-    .user-icon:before {
-      font-size: 25px;
-      display: flex;
-      border-radius: 50px;
-      padding: 3px;
-      margin-right: 20px;
-      color: #000;
-      background: linear-gradient(to right, var(--theme-purple), var(--theme-blue));
-    }
-  }
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: space-between;
+  // height: var(--nav-height);
 }
 
-.navbar-item,
-.sidebar-item {
+.navbar-item {
   text-decoration: none;
   color: #fff;
   font-weight: 200;
 }
 
-.logo {
-  color: #fff;
-  text-align: left;
-  font-size: 30px;
-  font-weight: 300;
-  background: linear-gradient(90deg, var(--theme-purple), var(--theme-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.navbar li {
+  list-style: none;
+  padding-right: 10px;
+}
+
+.navbar ul {
   display: flex;
-  align-items: center;
 }
 
-.treelogo {
-  height: 40px;
-  margin-right: 10px;
+.navbar a {
+  color: white;
 }
 
-.bars {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 2px;
-}
-
-.bar {
-  background-color: #fff;
-  width: 30px;
-  height: 5px;
-  border-radius: 10px;
-  margin: 2px;
-  margin-right: 15px;
-  background: linear-gradient(90deg, var(--theme-purple), var(--theme-blue));
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  background-color: #000;
-  height: calc(100vh - var(--nav-height) - var(--sidebar-height-discrepancy));
-  width: 325px;
-  padding: 20px 40px;
-  transition: all 0.5s ease-in-out;
-  right: 0;
-  transform: translateX(100%);
-  opacity: 0;
-
-  &>.navbar-item {
-    color: #fff;
-  }
-}
-
-.xMark {
-  margin-right: 9px;
-  display: flex;
-  font-size: 38px;
-  color: #f5efef;
-  background: linear-gradient(90deg, var(--theme-purple), var(--theme-blue));
-  padding-bottom: 8px;
-  border-radius: 3px;
-  padding: 0 9px;
-}
-
-.active {
-  transform: translateX(0);
-  opacity: 0.99;
-  z-index: 1;
-}
-
-.sidebar-item {
-  padding: 17px 20px;
-  font-size: 30px;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-
-  // fa-icons:
-  & :nth-child(1) {
-    margin-right: 14px;
-    width: 35px;
-    padding: 5px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, var(--theme-purple), var(--theme-blue));
-  }
-}
-
-.on-page {
-  font-weight: 500;
-  // text-transform: uppercase;
-
-  & :nth-child(1) {
-    background: none;
-  }
-}
-
-.welcome-banner {
-  color: #fff;
-  font-weight: 300;
-  background: linear-gradient(90deg, var(--theme-purple), var(--theme-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 200px;
-  padding-right: 15px;
-
-  span {
-    // border: 2px solid yellow;
-    text-align: center;
-    margin: 0;
-
-    &:nth-of-type(2) {
-      font-weight: 500;
-      font-size: 17px;
-    }
-  }
-}
-
-@media (max-width: 640px) {
-
-  // so that welcome banner doesn't make the logo wrap 2 lines
-  .neighbour-needs-logo-text {
-    display: none;
-  }
-}
-
-@media (max-width: 425px) {
-
-  .sidebar {
-    width: 100vw;
-    padding-right: 0;
-  }
-
-  .sidebar-item {
-    margin: 0 35px;
-    padding-right: 0;
-    padding-left: 30px;
-    font-size: 25px;
-
-    &:first-of-type {
-      padding-top: 0;
-    }
-  }
-}
-
-@media (max-width: 360px) {
-  .sidebar-item {
-    padding-left: 0;
-  }
+.navbar a:visited{
+  color: white;
 }

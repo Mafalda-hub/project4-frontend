@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TattooCard = ({ _id, artist, name, description, image }) => {
+// ! CADA QUADRADINHO DA PAG PRINCIPAL
+
+const TattooCard = ({ id, artist, name, image }) => {
   return (
     <div>
-      <Link to={`/tattoos/${_id}`}>
+      <Link to={`/tattoos/${id}`}>
         <div>
           <div>
             <h2>{name}</h2>
@@ -13,9 +15,6 @@ const TattooCard = ({ _id, artist, name, description, image }) => {
             <figure>
               <img src={image} alt={artist} />
             </figure>
-          </div>
-          <div>
-            <h5>{description}</h5>
           </div>
         </div>
       </Link>
