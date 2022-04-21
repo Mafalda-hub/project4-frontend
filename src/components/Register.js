@@ -31,70 +31,65 @@ function Register() {
   }
 
   return (
-    <section className="r_section">
-      <div className="container">
-        <div className="columns">
-          <form
-            className="column is-half is-offset-one-quarter box"
-            onSubmit={handleSubmit}
-          >
-            <div className="field">
-              <label className="label">Username</label>
-              <div className="control">
-                <input
-                  className="input"
-                  placeholder="Username"
-                  name="username"
-                  onChange={handleChange}
-                  value={user.username}
-                />
-              </div>
+    <section className="form-section">
+      <div className="register-hero">
+        <form className="register-form" onSubmit={handleSubmit}>
+          <div className="field">
+            <label className="label">Username</label>
+            <div className="control">
+              <input
+                className="input"
+                placeholder="Username"
+                name="username"
+                onChange={handleChange}
+                value={user.username}
+              />
             </div>
-            <div className="field">
-              <label className="label">Email</label>
-              <div className="control">
-                <input
-                  className="input"
-                  placeholder="Email"
-                  name="email"
-                  onChange={handleChange}
-                  value={user.email}
-                />
-              </div>
+          </div>
+          <div className="field">
+            <label className="label">Email</label>
+            <div className="control">
+              <input
+                className="input"
+                placeholder="Email"
+                name="email"
+                onChange={handleChange}
+                value={user.email}
+              />
             </div>
-            <div className="field">
-              <label className="label">Password</label>
-              <div className="control">
-                <input
-                  type="password"
-                  className="input"
-                  placeholder="Password"
-                  name="password"
-                  onChange={handleChange}
-                  value={user.password}
-                />
-              </div>
+          </div>
+          <div className="field">
+            <label className="label">Password</label>
+            <div className="control">
+              <input
+                type="password"
+                className="input"
+                placeholder="Password"
+                name="password"
+                onChange={handleChange}
+                value={user.password}
+              />
             </div>
-            <div className="field">
-              <label className="label">Password Confirmation</label>
-              <div className="control">
-                <input
-                  type="password"
-                  className="input"
-                  placeholder="Password Confirmation"
-                  name="passwordConfirmation"
-                  onChange={handleChange}
-                  value={user.passwordConfirmation}
-                />
-              </div>
+          </div>
+          <div className="field">
+            <label className="label">Password Confirmation</label>
+            <div className="control">
+              <input
+                type="password"
+                className="input"
+                placeholder="Password Confirmation"
+                name="passwordConfirmation"
+                onChange={handleChange}
+                value={user.passwordConfirmation}
+              />
             </div>
-            <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">
-                Register Me!
-              </button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div className="field">
+            <button type="submit" className="button is-fullwidth is-warning">
+              Register Me!
+            </button>
+          </div>
+        </form>
       </div>
     </section>
   );

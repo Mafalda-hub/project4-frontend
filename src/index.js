@@ -8,5 +8,6 @@ import './styles/navbar.scss';
 import './styles/alltatsin.scss';
 import './styles/tattoocard.scss';
 import './styles/register.scss';
+import './styles/login.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
