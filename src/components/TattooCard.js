@@ -5,12 +5,10 @@ import { Link } from 'react-router-dom';
 
 const TattooCard = ({ id, artist, name, image }) => {
   return (
-    <div>
+    <div className="tc_container">
       <Link to={`/tattoos/${id}`}>
         <div>
-          <div>
-            <h2>{name}</h2>
-          </div>
+          <h2>{name}</h2>
           <div>
             <figure>
               <img src={image} alt={artist} />

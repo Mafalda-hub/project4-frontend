@@ -18,7 +18,7 @@ const AllTats = () => {
   }, []);
 
   return (
-    <section className="section">
+    <section className="ati_section">
       <div className="columns">
         {!tattoos ? (
           <p>Loading...</p>
