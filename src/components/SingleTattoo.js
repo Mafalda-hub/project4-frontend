@@ -26,12 +26,15 @@ const SingleTattoo = () => {
           <p>Loading...</p>
         ) : (
           <div>
-            <h2 className="title">{tattoo.name}</h2>
-            <hr />
-            <div className="columns">
-              <figure className="image">
+            <div className="square">
+              <figure>
                 <img src={tattoo.image} alt={tattoo.name} />
               </figure>
+              <h2 className="title">{tattoo.name}</h2>
+              <div className="description">
+                <p>{tattoo.description}</p>
+              </div>
+              <div className="artist">{tattoo.artist.name}</div>
             </div>
           </div>
         )}

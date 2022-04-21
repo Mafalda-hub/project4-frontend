@@ -1,3 +1,27 @@
+// .tc_container {
+//   width: 100%;
+// }
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2{
+  font-size: 16px;
+  align-items: center;
+}
+
+img{
+  width: 300px;
+  height: 350px;
+}
+
 .tc_container {
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+
 }
