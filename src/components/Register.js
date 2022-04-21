@@ -31,7 +31,7 @@ function Register() {
   }
 
   return (
-    <section className="section">
+    <section className="r_section">
       <div className="container">
         <div className="columns">
           <form

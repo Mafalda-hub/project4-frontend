@@ -16,19 +16,19 @@ body {
 }
 
 // Login & Register page (very similar design)
-// .form-section {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-around;
-//   align-items: center;
-//   margin: 0;
-//   height: 100%;
-//   min-height: calc(100vh - var(--nav-height));
-//   background-image: url(https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
-//   background-repeat: no-repeat;
-//   background-position: center top;
-//   background-size: cover;
-// }
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+  min-height: calc(100vh - var(--nav-height));
+  background-image: url(https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
 
 form {
   border-radius: 5px;
