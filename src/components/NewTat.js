@@ -31,13 +31,10 @@ function NewTat() {
   }
 
   return (
-    <section className="section">
+    <section className="form-section">
       <div className="container">
         <div className="columns">
-          <form
-            className="column is-half is-offset-one-quarter box"
-            onSubmit={handleSubmit}
-          >
+          <form onSubmit={handleSubmit}>
             <div className="field">
               <label className="label">Name</label>
               <div className="control">

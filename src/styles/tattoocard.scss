@@ -1,6 +1,6 @@
 
 
-.square {
+.tc_square {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,9 +14,9 @@
   margin: 50px;
 }
 
-.card{
-  width: 150px;
-  height: 200px;
+.tc_card{
+  width: 300px;
+  height: 350px;
   background-color: #333;
   border-radius: 10px;
   outline: 1px solid rgba(255, 255, 255, .5);
@@ -26,7 +26,7 @@
   overflow: hidden;
 }
 
-.card-image{
+.tc_card-image{
   position: absolute;
   inset: 0;
   width: 100%;
@@ -36,14 +36,14 @@
   transition: transform .75s
 }
 
-.card:hover .card-imagem {
+.tc_card:hover .tc_card-image {
   transform: scale(1.15);
 }
-.card-title{
+.tc_card-title{
   position: absolute;
-  left: 15px;
-  bottom: 15px;
-  font-size: 20px;
+  left: 10px;
+  bottom: -5px;
+  font-size: 16px;
   text-shadow: 0 0 1px rgba(0, 0, 0, .5)
 }
 
@@ -53,7 +53,7 @@
     flex-direction: column;
   } 
 
-  .card {
+  .tc_card {
     width: 300px;
     height: 350px;
   }

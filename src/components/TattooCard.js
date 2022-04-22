@@ -7,11 +7,11 @@ const TattooCard = ({ id, artist, name, image }) => {
   return (
     <div className="tc_container">
       <Link to={`/tattoos/${id}`}>
-        <div className="square">
-          <div className="card">
+        <div className="tc_square">
+          <div className="tc_card">
             <figure>
-              <img src={image} alt={artist} className="card-image" />
-              <h3 className="card-title">{name}</h3>
+              <img src={image} alt={artist} className="tc_card-image" />
+              <h3 className="tc_card-title">{name}</h3>
             </figure>
           </div>
         </div>

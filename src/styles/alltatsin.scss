@@ -1,8 +1,12 @@
+// .ati_section {
+//   display: flex;
+// }
+
 .columns {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   display: grid;
-  column-gap: 50px;
+  column-gap: 10px;
 
 }
 
