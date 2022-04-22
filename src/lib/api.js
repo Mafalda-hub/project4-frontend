@@ -17,9 +17,9 @@ export const createTat = (tattoo) => {
 };
 
 export const registerUser = (user) => {
-  return axios.post(`${baseUrl}/register`, user);
+  return axios.post(`${baseUrl}/authentication/register/`, user);
 };
 
 export const loginUser = (user) => {
-  return axios.post(`${baseUrl}/login`, user);
+  return axios.post(`${baseUrl}/login/`, user);
 };
