@@ -5,3 +5,12 @@
   column-gap: 50px;
 
 }
+
+@media only screen and (max-width:600px) {
+  .columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } 
+
+}

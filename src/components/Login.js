@@ -29,42 +29,62 @@ function Login() {
     getData();
   }
   return (
-    <section className="form-section">
-      <div className="login-hero">
-        <form onSubmit={handleSubmit}>
-          <div className="field">
-            <label className="label">Email</label>
-            <div>
-              <input
-                className="input"
-                placeholder="Email"
-                name="email"
-                onChange={handleChange}
-                value={user.email}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Password</label>
-            <div>
-              <input
-                type="password"
-                className="input"
-                placeholder="Password"
-                name="password"
-                onChange={handleChange}
-                value={user.password}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <button type="submit" className="button is-fullwidth is-warning">
-              Log Me In!
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
+    <div className="login-box">
+      <h2>Login</h2>
+      <form>
+        <div className="user-box">
+          <input type="text" name="" required="" />
+          <label>Username</label>
+        </div>
+        <div className="user-box">
+          <input type="password" name="" required="" />
+          <label>Password</label>
+        </div>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+      </form>
+    </div>
+    // <section className="form-section">
+    //   <div className="login-hero">
+    //     <form onSubmit={handleSubmit}>
+    //       <div className="field">
+    //         <label className="label">Email</label>
+    //         <div>
+    //           <input
+    //             className="input"
+    //             placeholder="Email"
+    //             name="email"
+    //             onChange={handleChange}
+    //             value={user.email}
+    //           />
+    //         </div>
+    //       </div>
+    //       <div className="field">
+    //         <label className="label">Password</label>
+    //         <div>
+    //           <input
+    //             type="password"
+    //             className="input"
+    //             placeholder="Password"
+    //             name="password"
+    //             onChange={handleChange}
+    //             value={user.password}
+    //           />
+    //         </div>
+    //       </div>
+    //       <div className="field">
+    //         <button type="submit" className="button is-fullwidth is-warning">
+    //           Log Me In!
+    //         </button>
+    //       </div>
+    //     </form>
+    //   </div>
+    // </section>
   );
 }
 

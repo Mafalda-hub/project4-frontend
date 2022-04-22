@@ -1,33 +1,99 @@
-.form-section {
-  height: calc(100vh - var(--nav-height));
-  padding-top: var(--nav-height);
-  background-image: url(https://images.unsplash.com/photo-1604374376934-2df6fad6519b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+html {
+  height: 100%;
 }
 
-.login-hero {
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: white
 }
 
-.label {
-  padding: 10px;
-  display: flex;
-  width: 50px;
+.login-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius:10px;
+
 }
 
-form {
-  button {
-    margin: 20px 0;
-    padding: 10px;
-    width: 155px;
-    font-size: 16px;
-
-    &:hover {
-      transform: scale(1.1);
-      color: #000;
-      font-weight: 400;
-    }
-  }
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
 }
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+
+
+
+// .form-section {
+//   height: calc(100vh - var(--nav-height));
+//   padding-top: var(--nav-height);
+//   background-image: url(https://images.unsplash.com/photo-1604374376934-2df6fad6519b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+// }
+
+// .login-hero {
+//   border-radius: 5px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .label {
+//   padding: 10px;
+//   display: flex;
+//   width: 50px;
+// }
+
+// form {
+//   button {
+//     margin: 20px 0;
+//     padding: 10px;
+//     width: 155px;
+//     font-size: 16px;
+
+//     &:hover {
+//       transform: scale(1.1);
+//       color: #000;
+//       font-weight: 400;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width:600px) {
+//   RESPOSIVE 
+// }

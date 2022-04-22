@@ -7,6 +7,7 @@ import './styles/home.scss';
 import './styles/navbar.scss';
 import './styles/alltatsin.scss';
 import './styles/tattoocard.scss';
+import './styles/singletattoo.scss';
 import './styles/register.scss';
 import './styles/login.scss';
 
