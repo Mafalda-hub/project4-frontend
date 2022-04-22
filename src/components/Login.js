@@ -29,15 +29,15 @@ function Login() {
     getData();
   }
   return (
-    <section className="form-section">
+    <section className="l_form-section">
       <div className="login-hero">
         <form onSubmit={handleSubmit}>
+          <h1>Login</h1>
           <div className="field">
             <label className="label">Email</label>
             <div>
               <input
                 className="input"
-                placeholder="Email"
                 name="email"
                 onChange={handleChange}
                 value={user.email}
@@ -50,7 +50,6 @@ function Login() {
               <input
                 type="password"
                 className="input"
-                placeholder="Password"
                 name="password"
                 onChange={handleChange}
                 value={user.password}
@@ -58,9 +57,7 @@ function Login() {
             </div>
           </div>
           <div className="field">
-            <button type="submit" className="button is-fullwidth is-warning">
-              Log Me In!
-            </button>
+            <button type="submit">Log Me In!</button>
           </div>
         </form>
       </div>
