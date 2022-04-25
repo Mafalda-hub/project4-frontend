@@ -27,20 +27,6 @@ function Login() {
     };
     getData();
   }
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-
-  //   const getData = async () => {
-  //     try {
-  //       const { data } = await loginUser(user);
-  //       localStorage.setItem('accessToken', data.token);
-  //       navigate('/');
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-  //   getData();
-  // }
 
   return (
     <section className="l_form-section">
@@ -63,13 +49,9 @@ function Login() {
           />
           <br />
           <div>
-            <input type="button" type="submit" value="Sign in" />
+            <input type="submit" value="Sign in" />
             <br></br>
             <a href="#">Forgot Password?</a>
-
-            {/* <button type="submit" className="l_button">
-              Log Me In!
-            </button> */}
           </div>
         </form>
       </div>

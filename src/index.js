@@ -11,6 +11,5 @@ import './styles/singletattoo.scss';
 import './styles/register.scss';
 import './styles/login.scss';
 import './styles/newtat.scss';
-import './styles/sidebar.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));

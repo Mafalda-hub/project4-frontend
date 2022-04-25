@@ -1,5 +1,3 @@
-
-
 .tc_square {
   display: flex;
   justify-content: center;
@@ -44,7 +42,11 @@
   left: 10px;
   bottom: -5px;
   font-size: 16px;
-  text-shadow: 0 0 1px rgba(0, 0, 0, .5)
+  text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+  background-color: #aa97976e;
+  padding: 5px 15px;
+  border-radius: 10px;
+
 }
 
 @media only screen and (max-width:600px) {

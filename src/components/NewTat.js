@@ -58,24 +58,7 @@ function NewTat() {
             value={tattoo.image}
           />
           <br />
-
-          {/* <div className="field">
-            <label className="label">Artist</label>
-            <div className="control">
-              <textarea
-                className="textarea"
-                placeholder="Artist...."
-                name="artist"
-                onChange={handleChange}
-                value={tattoo.artist}
-              />
-            </div>
-          </div> */}
-          <input type="button" type="submit" value="Post your tattoo!" />
-
-          {/* <button type="submit" className="button is-warning is-fullwidth">
-            Post your tattoo!
-          </button> */}
+          <input type="submit" value="Post your tattoo!" />
         </form>
       </div>
     </section>

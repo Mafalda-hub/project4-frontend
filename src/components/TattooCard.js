@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// ! CADA QUADRADINHO DA PAG PRINCIPAL
-
 const TattooCard = ({ id, name, image }) => {
   return (
     <div className="tc_container">

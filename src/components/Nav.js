@@ -16,7 +16,6 @@ const Nav = () => {
 
   const handleLogout = () => {
     removeToken();
-    console.log(userId);
     removeUserId();
     Navigate('/');
     console.log('logged out');
@@ -24,7 +23,7 @@ const Nav = () => {
 
   return (
     <>
-      <side className={`navbar-side ${isSidebarOpen ? 'open' : 'close'}`}>
+      <aside className={`navbar-side ${isSidebarOpen ? 'open' : 'close'}`}>
         <nav>
           <ul className="navbar-brand">
             <li className="navbar-item">
@@ -68,7 +67,7 @@ const Nav = () => {
             )}
           </ul>
         </nav>
-      </side>
+      </aside>
       <button
         type="button"
         className={`hamburger ${isSidebarOpen ? 'active' : 'close'}`}
