@@ -4,10 +4,12 @@
   background-color: rgba(0, 0, 0, 0.5);
   transform: translate3d(-100%, 0, 0);
   transition: transform .5s;
+  z-index: 30px;
 }
 
 .navbar-side.open{
   transform: translate3d(0, 0, 0);
+  z-index: 10;
 }
 
 .navbar-item {
@@ -26,17 +28,12 @@
   margin: 0;
   padding: 100px;
 }
-
-.navbar a {
+a.navbar-link{
   color: white;
 }
 
-.navbar-link:visited{
+a.navbar-link:visited{
   color: #fff;
-}
-
-.navbar a:visited{
-  color: white;
 }
 
 .hamburger {
@@ -47,6 +44,7 @@
   position: absolute;
   margin-top: 20px;
   margin-left: 20px;
+  z-index: 11;
 }
 
 .hamburger .line{
@@ -56,6 +54,7 @@
   background-color: white;
   margin-block: 10px;
   border-radius: 4px;
+  border: 1px solid black;
   transition: transform .5s;
   opacity: .25s;
 }

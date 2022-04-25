@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
-
   const [user, setUser] = React.useState({
     email: '',
     password: '',
@@ -19,71 +18,62 @@ function Login() {
 
     const getData = async () => {
       try {
-        const { data } = await loginUser(user);
-        localStorage.setItem('accessToken', data.token);
+        await loginUser(user);
+
         navigate('/');
-      } catch (err) {
-        console.error(err);
+      } catch (error) {
+        console.log(error.response.data);
       }
     };
     getData();
   }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+
+  //   const getData = async () => {
+  //     try {
+  //       const { data } = await loginUser(user);
+  //       localStorage.setItem('accessToken', data.token);
+  //       navigate('/');
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   };
+  //   getData();
+  // }
+
   return (
     <section className="l_form-section">
-      <div className="login-hero">
-        <form onSubmit={handleSubmit}>
-          <h1>Login</h1>
-          <div className="field">
-            <label className="label">Email</label>
-            <div>
-              <input
-                className="input"
-                name="email"
-                onChange={handleChange}
-                value={user.email}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Password</label>
-            <div>
-              <input
-                type="password"
-                className="input"
-                name="password"
-                onChange={handleChange}
-                value={user.password}
-              />
-            </div>
-          </div>
-          <div className="field">
-            <button type="submit" className="l_button">
+      <div>
+        <form onSubmit={handleSubmit} className="form_container">
+          <p>Login</p>
+          <input
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+            value={user.email}
+          />
+          <br />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+            value={user.password}
+          />
+          <br />
+          <div>
+            <input type="button" type="submit" value="Sign in" />
+            <br></br>
+            <a href="#">Forgot Password?</a>
+
+            {/* <button type="submit" className="l_button">
               Log Me In!
-            </button>
+            </button> */}
           </div>
         </form>
       </div>
     </section>
-    // <div className="login-box">
-    //   <h2>Login</h2>
-    //   <form>
-    //     <div className="user-box">
-    //       <input type="text" name="" required="" />
-    //       <label>Username</label>
-    //     </div>
-    //     <div className="user-box">
-    //       <input type="password" name="" required="" />
-    //       <label>Password</label>
-    //     </div>
-    //     <a href="#">
-    //       <span></span>
-    //       <span></span>
-    //       <span></span>
-    //       <span></span>
-    //       Submit
-    //     </a>
-    //   </form>
-    // </div>
   );
 }
 

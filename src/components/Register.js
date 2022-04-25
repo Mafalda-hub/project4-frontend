@@ -38,68 +38,49 @@ const Register = () => {
   return (
     <>
       <section className="r_form-section">
-        <div className="register-hero">
-          <form className="register-form" onSubmit={handleSubmit}>
-            <h1>Register</h1>
-            <div className="field">
-              <label htmlFor="username" className="label">
-                Username
-              </label>
-              <div className="control">
-                <input
-                  type="text"
-                  className="input"
-                  id="username"
-                  value={usernameValue}
-                  onChange={handleUsernameChange}
-                />
-              </div>
-            </div>
-            <div className="field">
-              <label htmlFor="email" className="label">
-                Email
-              </label>
-              <div className="control">
-                <input
-                  type="text"
-                  className="input"
-                  id="email"
-                  value={emailValue}
-                  onChange={handleEmailChange}
-                />
-              </div>
-            </div>
-            <div className="field">
-              <label htmlFor="password" className="label">
-                Password
-              </label>
-              <div className="control">
-                <input
-                  type="password"
-                  className="input"
-                  id="password"
-                  value={passwordValue}
-                  onChange={handlePasswordChange}
-                />
-              </div>
-            </div>
-            <div className="field">
-              <label htmlFor="password" className="label">
-                Confirm Password
-              </label>
-              <div className="control">
-                <input
-                  type="password"
-                  className="input"
-                  id="passwordConfirmation"
-                  value={passwordConfirmationValue}
-                  onChange={handlePasswordConfirmationChange}
-                />
-              </div>
-            </div>
-            <button type="submit" className="r_button">
+        <div>
+          <form onSubmit={handleSubmit} className="form_container">
+            <p>Register</p>
+
+            <input
+              type="text"
+              placeholder="Username"
+              value={usernameValue}
+              onChange={handleUsernameChange}
+            />
+            <br />
+
+            <input
+              type="text"
+              placeholder="Email"
+              value={emailValue}
+              onChange={handleEmailChange}
+            />
+            <br />
+
+            <input
+              type="password"
+              placeholder="Password"
+              value={passwordValue}
+              onChange={handlePasswordChange}
+            />
+            <br />
+
+            <input
+              type="password"
+              placeholder="Password Confirmation"
+              value={passwordConfirmationValue}
+              onChange={handlePasswordConfirmationChange}
+            />
+            <br />
+
+            <input type="button" type="submit" value="Register" />
+            <br />
+            <a href="#">Cant log in?</a>
+
+            {/* <button type="submit" className="r_button">
               Register
-            </button>
+            </button> */}
           </form>
         </div>
       </section>

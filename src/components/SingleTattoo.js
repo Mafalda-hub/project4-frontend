@@ -28,7 +28,7 @@ const SingleTattoo = () => {
           <div>
             <div className="st_square">
               <figure>
-                <img src={tattoo.image} alt={tattoo.name} />
+                <img src={tattoo.image} alt={tattoo.name} className="st" />
               </figure>
               <h2 className="title">{tattoo.name}</h2>
               <div className="description">

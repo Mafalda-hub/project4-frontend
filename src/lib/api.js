@@ -10,19 +10,32 @@ export const getSingleTattoo = (id) => {
   return axios.get(`${baseUrl}/tattoos/${id}`);
 };
 
-export const createTat = (tattoo) => {
-  return axios.post(`${baseUrl}/tattoos/create`, tattoo, {
-    headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
-  });
+export const createTat = async (tattoo) => {
+  const options = {
+    method: 'POST',
+    url: `${baseUrl}/tattoos/create`,
+    data: tattoo,
+    headers: {
+      authorization: `Bearer ${window.sessionStorage.getItem('token')}`,
+    },
+  };
+  const { data } = await axios.request(options);
+  return data;
 };
-
-// export const registerUser = (user) => {
-//   return axios.post(`${baseUrl}/authentication/register/`, user);
+// export const createTat = () => {
+//   return axios.post(`${baseUrl}/tattoos/create`, {
+//     headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+//   });
 // };
 
-// export const loginUser = (user) => {
-//   return axios.post(`${baseUrl}/login/`, user);
-// };
+export const getCategories = async () => {
+  const options = {
+    method: 'GET',
+    url: `${baseUrl}/categories/`,
+  };
+  const { data } = await axios.request(options);
+  return data;
+};
 
 export const registerUser = async (credentials) => {
   const options = {
@@ -51,4 +64,19 @@ export const loginUser = async (credentials) => {
   }
   console.log(data);
   return data.message;
+};
+
+export function getLoggedInUserId() {
+  const token = sessionStorage.getItem('token');
+  if (!token) return false; // safety in case no token
+
+  const userObject = JSON.parse(window.atob(token.split('.')[1]));
+  return userObject.sub;
+}
+
+export const removeToken = () => {
+  window.sessionStorage.removeItem('token');
+};
+export const removeUserId = () => {
+  window.sessionStorage.removeItem('userId');
 };

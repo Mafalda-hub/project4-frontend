@@ -1,6 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { getLoggedInUserId } from '../lib/api';
+
+import { removeToken, removeUserId } from '../lib/api';
 
 const Nav = () => {
   const [isSidebarOpen, setSidebarOpen] = React.useState(false);
@@ -10,6 +13,14 @@ const Nav = () => {
   React.useEffect(() => {
     setSidebarOpen(false);
   }, [location]);
+
+  const handleLogout = () => {
+    removeToken();
+    console.log(userId);
+    removeUserId();
+    Navigate('/');
+    console.log('logged out');
+  };
 
   return (
     <>
@@ -23,28 +34,38 @@ const Nav = () => {
             </li>
 
             <li className="navbar-item ">
-              <Link to="/register" className="navbar-link">
-                Register
-              </Link>
-            </li>
-
-            <li className="navbar-item ">
-              <Link to="/login" className="navbar-link">
-                Login
-              </Link>
-            </li>
-
-            <li className="navbar-item ">
               <Link to="/tattoos" className="navbar-link">
                 Tattoos
               </Link>
             </li>
+            {getLoggedInUserId() ? (
+              <>
+                <li className="navbar-item ">
+                  <Link to="/new-tattoo" className="navbar-link">
+                    Post your tat
+                  </Link>
+                </li>
+                <li className="navbar-item ">
+                  <Link to="/" className="navbar-link" onClick={handleLogout}>
+                    Logout
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="navbar-item ">
+                  <Link to="/register" className="navbar-link">
+                    Register
+                  </Link>
+                </li>
 
-            <li className="navbar-item ">
-              <Link to="/new-tattoo" className="navbar-link">
-                Post your tat
-              </Link>
-            </li>
+                <li className="navbar-item ">
+                  <Link to="/login" className="navbar-link">
+                    Login
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </side>
