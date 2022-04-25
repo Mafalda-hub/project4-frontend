@@ -9,7 +9,6 @@ function NewTat() {
     name: '',
     description: '',
     image: '',
-    artist: '',
   });
 
   function handleChange(event) {

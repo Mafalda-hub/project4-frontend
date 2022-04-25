@@ -34,7 +34,7 @@ const SingleTattoo = () => {
               <div className="description">
                 <p className="st_p">{tattoo.description}</p>
               </div>
-              <div className="artist">{tattoo.artist.name}</div>
+              {/* <div className="artist">{tattoo.artist.name}</div> */}
             </div>
           </div>
         )}
