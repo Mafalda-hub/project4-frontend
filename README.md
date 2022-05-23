@@ -346,13 +346,13 @@ By linking these tables together, I was able to create responses from the API wh
 
 ## Handing Authentication Server Side
 
-TO ensure that users could only post a tattoo if they are an authenticated user of the application, I used [JWT tokens](https://www.django-rest-framework.org/api-guide/authentication/#json-web-token-authentication) to authenticate users when logging in and return a token in the response, which could be used in subsequent requests to either allow or disallow requests for data from the API. Although the use of this is currently limitted, I have features planned for the application which will rely on this functionality, so I thought it best to implement authentication at an early stage in the build.
+To ensure that users could only post a tattoo if they are an authenticated user of the application, I used [JWT tokens](https://www.django-rest-framework.org/api-guide/authentication/#json-web-token-authentication) to authenticate users when logging in and return a token in the response, which could be used in subsequent requests to either allow or disallow requests for data from the API. Although the use of this is currently limited, I have features planned for the application which will rely on this functionality, so I thought it best to implement authentication at an early stage in the build.
 
 ## Building The Frontend
 
 As I had decided to use a minimalist deisgn for the frontend, I wanted to limit the colour palette to neutral tones to not distract from the tattoos, which should be the main focus for users eyes when looking at the screen.
 
-I decided to build the pages in a logicial order of how a user would use the application. The first page to be built was the index of all the tattoos to be displayed.To build this page, I made a request to the API for the data from the `/tattoos/` endpoint. With this data, I was able to build a React component which would use a `.map()` function to loop over all of the data returned from the API and display each indeividual tattoo on the page like so:
+I decided to build the pages in a logical order of how a user would use the application. The first page to be built was the index of all the tattoos to be displayed. To build this page, I made a request to the API for the data from the `/tattoos/` endpoint. With this data, I was able to build a React component which would use a `.map()` function to loop over all of the data returned from the API and display each individual tattoo on the page like so:
 
 <div align="center">
 <img src="./assets/index.png"  height="310px"/>
